@@ -1,0 +1,134 @@
+\normalfont\documentclass[letterpaper,11pt]{article}
+\usepackage{amsmath, amsfonts,amssymb,latexsym}
+\usepackage{fullpage}
+\usepackage{parskip}
+\usepackage{flexisym}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{algorithm2e}
+% \usepackage{algorithm}
+\usepackage{algorithmicx}
+% \usepackage{algpseudocode}
+\usepackage{amsmath}
+\begin{document}
+\setlength{\parindent}{2ex}
+\newcommand{\header}{
+	\noindent \fbox{
+	\begin{minipage}{6.4in}
+	\medskip
+	\textbf{CS 271 -  Introduction to Artificial Intelligence} \hfill \textbf{Fall 2016} \\[1mm]
+	\begin{center}
+		{\Large HomeWork 2} \\[3mm]
+	\end{center}
+	  Name: \itshape{Liangjian Chen} \\
+	  \textnormal{ID}: \itshape{\#52006933} \hfill \today
+	\medskip
+	\end{minipage}}
+}
+\bigskip
+\header
+
+\begin{enumerate}
+\item[Problem 1]\par
+	\begin{enumerate}
+		\item[Step 1] Zerind\\
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				Name & g & h & f\\
+				\hline
+				Arad & 75 & 366 & 441\\
+				Oradea & 71 & 380 & 451\\
+				\hline
+			\end{tabular}
+		\item[Step 2]  Arad\\
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				Name & g & h & f\\
+				\hline
+				Sibiu & 215 & 366 & 441\\
+				Timisoara& 193 & 329 & 522\\
+				Oradea & 71 & 380 & 451\\
+				\hline
+			\end{tabular}
+		\item[Step 3] 
+			Sibiu\\
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				Name & g & h & f\\
+				\hline
+				Fagaras & 214 & 176 & 390\\
+				Rimnicu Vilcea &  295 & 193 & 488\\
+				Timisoara & 193 &  329 & 522\\
+				Oradea & 71 & 380 & 451\\
+				\hline
+			\end{tabular}
+		\item[Step 4]
+			Fagaras\\
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				Name & g & h & f\\
+				\hline
+				Bucharest & 425 & 0 & 425\\
+				Rimnicu Vilcea &  295 & 193 & 488\\
+				Timisoara & 193 &  329 & 522\\
+				Oradea & 71 & 380 & 451\\
+				\hline
+			\end{tabular}
+		\item [Step 5]
+			Find Bucharest, the distance is 25.
+	\end{enumerate}
+\item[Problem 2]\par
+	Assume $u$ expand $v$ and $s$ is the start point, $t$ is the destination.\\
+	\begin{enumerate}	
+		\item
+		\begin{flalign*}
+			f(v) = c(s,v) + h(v) = c(s,u) + c(u,v) + h(v) \ge c(s,u) + h(u) = f(u)
+		\end{flalign*}
+		\item
+		\begin{flalign*}
+		&h_1(u) \le c(u,v) + h_1(v)\\
+		&h_2(u) \le c(u,v) + h_2(v)\\
+		&h = \max\{h_1(u),h_2(u)\} \le \max\{c(u,v) + h_1(v), c(u,v) + h_2(v)\}\\
+		&= c(u,v) + \max\{h_1(v),h_2(v)\} = c(u,v) + h(v)
+		\end{flalign*}
+		\item prove it is admissible is proving the optimal path would always be found. Were it not he case, there would be another node $n^\prime$ in the frontier on the optimal path from $s$ to $t$. Let's say path 1 is the path find in heuristic search and path 2 is the optimal path go through $n^\prime$ and $d_1$ ,$d_2$ are their corresponding length. Thus,\\$f(u) = c(s,n^\prime) + h(n^\prime) \le c(s,n^\prime) + c(n^\prime,t) = d_1 \le d_2 = f(t)$\\
+		Then, in the last step, the frontier should pop the $n^\prime$ rather than $t$. So it contradict with the assumption. Thus the statement holds.
+		\item consider, after we pick $u$ out from the frontier, node $v$ link to $u$ again. From(a), we can obtain that $g(u) + h(u) \le g(v) + h(v)$ and $h(u) \ge h(v)$. The new weight is $f_{new}(u) = g(v) + c(v,s) + h(u) \ge g(u) + h(u)$. Thus, it would never update the $f(u)$ and would never push $u$ into frontier again.
+		\item Intuitively, $h(u)$ is an underestimate of $c(u,t)$, so if $h_1(u) \ge h_2(u)$, $h_1(u)$ is more accurate than $h_2(u)$. Thus, $A_1^*$ would expand \textbf{equal or less} than $A_2^*$.\par
+		For formal proof, let's consider picking node $u$ in the frontier by $h_2$, but there is another node $u^\prime$ whose $f$-value is smaller than $u$ by heuristic function $h_1$ which leads $u$. Then $A_1^*$ will choose $u^\prime$. If it leads to an optimal path without $u$, $A_1^*$ does not need to expand $u$ anymore. \par
+		However if no case mentioned above happened, the number of expand node should be same.
+	\end{enumerate}
+\item [Problem 3]\par
+	\begin{enumerate}
+		\item $S\to A\to B\to C\to F\to D\to E\to L\to M\to H\to I\to J\to K\to G$
+
+		\item $S\to A\to D\to E\to J\to G$
+
+		\item $S\to$\\
+		$S\to A\to B\to C\to$\\
+		$S\to A\to D\to E\to B\to F\to C\to H\to I\to$\\
+		$S\to A\to D\to E\to J\to K\to L\to B\to F\to M\to C\to H\to I\to$\\
+		$S\to A\to D\to E\to J\to G$
+	\end{enumerate}
+\item[Problem 4]\par
+	\begin{enumerate}
+		\item 
+			$$\text{Max} = \sum_{i=0}^g{b^i} = \frac{b^{g+1} - 1}{b - 1} = O(b^g)$$\\
+			$$\text{Min} = 1 + \sum_{i=0}^{g-1}{b^i} = 1 + \frac{b^{g} - 1}{b - 1} = O(b^{g-1})$$\\
+		\item
+			$$\text{Min} = g + 1 = O(g)$$\\
+			$$\text{Max} = \sum_{i=0}^d{b^i} - \sum_{i=0}^{d-g}{b^i} + 1 = \frac{b^{d + 1} - 1}{b - 1} - \frac{b^{d-g + 1} - 1}{b - 1} + 1 = O(b^d)$$\\
+		\item
+			$$\text{Min} = g + 1 + \sum_{j=0}^{g-1}\sum_{i=0}^j{b^i} = \frac{b^{g+1} - b}{(b-1)^2} - \frac{g}{b-1} + g + 1 = O(b^{g-1})$$\\
+			$$\text{Max} = \sum_{j=0}^{g}\sum_{i=0}^j{b^i} = \frac{b^{g+2} - b}{(b-1)^2} - \frac{g+1}{b-1} = O(b^g)$$\\
+	\end{enumerate}
+\item [Problem 5]\par
+		For a graph $G(E,V)$,the number of comparison is equal to the number of edge $|E|$. Because degree is $b$ and depth is $d$, $|E| = \frac{b|V|}{2}$. Then larger the number of node is, larger the number comparison is. And know that there are at most $1 + \sum_{i=0}^{d-1}{b(b-1)^i} = O(b^d)$ nodes. Thus, the number of comparison is $O(b^d)$.\par
+		Extra credit:\par
+			Assume $f(b,d)$ is the maximum possible number of node in the graph.\\
+			In this case, the number of comparison is $\sum_{i=0}^{f(b,d)}i = O(f(b,d)^2) = O(b^{2d})$
+
+
+
+\end{enumerate}
+\end{document}
