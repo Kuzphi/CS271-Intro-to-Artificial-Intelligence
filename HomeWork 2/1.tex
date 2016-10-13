@@ -97,37 +97,32 @@
 		\item Intuitively, $h(u)$ is an underestimate of $c(u,t)$, so if $h_1(u) \ge h_2(u)$, $h_1(u)$ is more accurate than $h_2(u)$. Thus, $A_1^*$ would expand \textbf{equal or less} than $A_2^*$.\par
 		For formal proof, let's consider picking node $u$ in the frontier by $h_2$, but there is another node $u^\prime$ whose $f$-value is smaller than $u$ by heuristic function $h_1$ which leads $u$. Then $A_1^*$ will choose $u^\prime$. If it leads to an optimal path without $u$, $A_1^*$ does not need to expand $u$ anymore. \par
 		However if no case mentioned above happened, the number of expand node should be same.
-	\end{enumerate}
+	\end{enumerate}\par
 \item [Problem 3]\par
+Solution:
 	\begin{enumerate}
-		\item $S\to A\to B\to C\to F\to D\to E\to L\to M\to H\to I\to J\to K\to G$
-
-		\item $S\to A\to D\to E\to J\to G$
-
-		\item $S\to$\\
-		$S\to A\to B\to C\to$\\
-		$S\to A\to D\to E\to B\to F\to C\to H\to I\to$\\
-		$S\to A\to D\to E\to J\to K\to L\to B\to F\to M\to C\to H\to I\to$\\
-		$S\to A\to D\to E\to J\to G$
-	\end{enumerate}
-\item[Problem 4]\par
-	\begin{enumerate}
-		\item 
-			$$\text{Max} = \sum_{i=0}^g{b^i} = \frac{b^{g+1} - 1}{b - 1} = O(b^g)$$\\
-			$$\text{Min} = 1 + \sum_{i=0}^{g-1}{b^i} = 1 + \frac{b^{g} - 1}{b - 1} = O(b^{g-1})$$\\
-		\item
-			$$\text{Min} = g + 1 = O(g)$$\\
-			$$\text{Max} = \sum_{i=0}^d{b^i} - \sum_{i=0}^{d-g}{b^i} + 1 = \frac{b^{d + 1} - 1}{b - 1} - \frac{b^{d-g + 1} - 1}{b - 1} + 1 = O(b^d)$$\\
-		\item
-			$$\text{Min} = g + 1 + \sum_{j=0}^{g-1}\sum_{i=0}^j{b^i} = \frac{b^{g+1} - b}{(b-1)^2} - \frac{g}{b-1} + g + 1 = O(b^{g-1})$$\\
-			$$\text{Max} = \sum_{j=0}^{g}\sum_{i=0}^j{b^i} = \frac{b^{g+2} - b}{(b-1)^2} - \frac{g+1}{b-1} = O(b^g)$$\\
-	\end{enumerate}
+		\item[Completeness:]
+			For any $w$, algorithm will expand all the node and find the answer.\\
+		\item[Optimal:]
+		\begin{flalign*}
+			&f(n) = (2 - w) g(n) + wh(n)\\
+			&f(n) = (2 - w)(g(n) + \frac{w}{2 - w}h(n))\\
+			&\text{the coefficient of $h(n)$ should less or equal $1$}\\
+			&\frac{w}{2-w} \le 1\\
+			&w \le 1\\
+		\end{flalign*}
+		\item[$w$ = 0:]
+		Uniform-cost search
+		\item[$w$ = 1:]
+		Best-first search
+		\item[$w$ = 2:]
+		Greedy best search
+	\end{enumerate}	
+\item[Problem 4]
+	Yes, we can use this result to cut some brunch. \par
+	If a node $u$'s estimated distance $f(u)$ is larger than $f_U$, we can just discard it , rather than putting it into frontier. 
 \item [Problem 5]\par
-		For a graph $G(E,V)$,the number of comparison is equal to the number of edge $|E|$. Because degree is $b$ and depth is $d$, $|E| = \frac{b|V|}{2}$. Then larger the number of node is, larger the number comparison is. And know that there are at most $1 + \sum_{i=0}^{d-1}{b(b-1)^i} = O(b^d)$ nodes. Thus, the number of comparison is $O(b^d)$.\par
-		Extra credit:\par
-			Assume $f(b,d)$ is the maximum possible number of node in the graph.\\
-			In this case, the number of comparison is $\sum_{i=0}^{f(b,d)}i = O(f(b,d)^2) = O(b^{2d})$
-
+	For example, a graph $G(V,E)$, $V = \{s,t,a,b\}$, $E = \{e(s,a,0),e(s,b,0),e(a,t,100),e(b,t,101)\}$. Heuristic function $h(a) = 90, h(b) = 10$. So we would expand $b$ before $a$ and get goal node $t$, at this time $f(t) = 101$, but the optimal path is $s\to a\to t$ which just cost $100$. So terminating as soon as goal node find is not correct.
 
 
 \end{enumerate}

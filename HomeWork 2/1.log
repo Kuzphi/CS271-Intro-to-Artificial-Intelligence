@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.22)  13 OCT 2016 12:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.22)  13 OCT 2016 16:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -469,37 +469,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--82
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--119
-
+Overfull \hbox (4.6893pt too wide) in paragraph at lines 125--126
+[]\OT1/cmr/m/n/10.95 For ex-am-ple, a graph $\OML/cmm/m/it/10.95 G\OT1/cmr/m/n/
+10.95 (\OML/cmm/m/it/10.95 V; E\OT1/cmr/m/n/10.95 )$, $\OML/cmm/m/it/10.95 V \O
+T1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 s; t; a; b\OMS/cmsy
+/m/n/10.95 g$\OT1/cmr/m/n/10.95 , $\OML/cmm/m/it/10.95 E \OT1/cmr/m/n/10.95 = \
+OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 e\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.9
+5 s; a; \OT1/cmr/m/n/10.95 0)\OML/cmm/m/it/10.95 ; e\OT1/cmr/m/n/10.95 (\OML/cm
+m/m/it/10.95 s; b; \OT1/cmr/m/n/10.95 0)\OML/cmm/m/it/10.95 ; e\OT1/cmr/m/n/10.
+95 (\OML/cmm/m/it/10.95 a; t; \OT1/cmr/m/n/10.95 100)\OML/cmm/m/it/10.95 ; e\OT
+1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 b; t; \OT1/cmr/m/n/10.95 101)\OMS/cmsy/m/n
+/10.95 g$\OT1/cmr/m/n/10.95 .
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 120--122
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
-
- []
-
-[3] (/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/HomeWork 2/1.aux)
- ) 
+[2] [3]
+(/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/HomeWork 2/1.aux) ) 
 Here is how much of TeX's memory you used:
  10501 strings out of 493029
  187730 string characters out of 6136234
@@ -507,22 +496,22 @@ Here is how much of TeX's memory you used:
  13953 multiletter control sequences out of 15000+600000
  9558 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,40p,10376b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmti10.pfb>
+ 38i,10n,40p,10376b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
+</
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti10.pfb>
 Output written on "/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/Hom
-eWork 2/1.pdf" (3 pages, 119144 bytes).
+eWork 2/1.pdf" (3 pages, 106680 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 50 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
