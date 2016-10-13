@@ -75,7 +75,7 @@
 				\hline
 			\end{tabular}
 		\item [Step 5]
-			Find Bucharest, the distance is 25.
+			Find Bucharest, the distance is 425.
 	\end{enumerate}
 \item[Problem 2]\par
 	Assume $u$ expand $v$ and $s$ is the start point, $t$ is the destination.\\
@@ -91,9 +91,9 @@
 		&h = \max\{h_1(u),h_2(u)\} \le \max\{c(u,v) + h_1(v), c(u,v) + h_2(v)\}\\
 		&= c(u,v) + \max\{h_1(v),h_2(v)\} = c(u,v) + h(v)
 		\end{flalign*}
-		\item prove it is admissible is proving the optimal path would always be found. Were it not he case, there would be another node $n^\prime$ in the frontier on the optimal path from $s$ to $t$. Let's say path 1 is the path find in heuristic search and path 2 is the optimal path go through $n^\prime$ and $d_1$ ,$d_2$ are their corresponding length. Thus,\\$f(u) = c(s,n^\prime) + h(n^\prime) \le c(s,n^\prime) + c(n^\prime,t) = d_1 \le d_2 = f(t)$\\
+		\item prove its admissibility is proving the optimal path would always be found. Were it not he case, there would be another node $n^\prime$ in the frontier on the optimal path from $s$ to $t$. Let's say path 1 is the path find in heuristic search and path 2 is the optimal path go through $n^\prime$ and $d_1$ ,$d_2$ are their corresponding length. Thus,\\$f(u) = c(s,n^\prime) + h(n^\prime) \le c(s,n^\prime) + c(n^\prime,t) = d_1 \le d_2 = f(t)$\\
 		Then, in the last step, the frontier should pop the $n^\prime$ rather than $t$. So it contradict with the assumption. Thus the statement holds.
-		\item consider, after we pick $u$ out from the frontier, node $v$ link to $u$ again. From(a), we can obtain that $g(u) + h(u) \le g(v) + h(v)$ and $h(u) \ge h(v)$. The new weight is $f_{new}(u) = g(v) + c(v,s) + h(u) \ge g(u) + h(u)$. Thus, it would never update the $f(u)$ and would never push $u$ into frontier again.
+		\item Consider this case, after picking $u$ out from the frontier, node $v$ link to $u$ again. From(a), we can obtain that $g(u) + h(u) \le g(v) + h(v)$ and $h(u) \ge h(v)$. The new weight is $f_{new}(u) = g(v) + c(v,s) + h(u) \ge g(u) + h(u)$. Thus, it would never update the $f(u)$ and would never push $u$ into frontier again.
 		\item Intuitively, $h(u)$ is an underestimate of $c(u,t)$, so if $h_1(u) \ge h_2(u)$, $h_1(u)$ is more accurate than $h_2(u)$. Thus, $A_1^*$ would expand \textbf{equal or less} than $A_2^*$.\par
 		For formal proof, let's consider picking node $u$ in the frontier by $h_2$, but there is another node $u^\prime$ whose $f$-value is smaller than $u$ by heuristic function $h_1$ which leads $u$. Then $A_1^*$ will choose $u^\prime$. If it leads to an optimal path without $u$, $A_1^*$ does not need to expand $u$ anymore. \par
 		However if no case mentioned above happened, the number of expand node should be same.
@@ -102,7 +102,7 @@
 Solution:
 	\begin{enumerate}
 		\item[Completeness:]
-			For any $w$, algorithm will expand all the node and find the answer.\\
+			For any $w$, algorithm will expand all the nodes and find an answer.\\
 		\item[Optimal:]
 		\begin{flalign*}
 			&f(n) = (2 - w) g(n) + wh(n)\\
@@ -116,7 +116,7 @@ Solution:
 		\item[$w$ = 1:]
 		Best-first search
 		\item[$w$ = 2:]
-		Greedy best search
+		Greedy best-first search
 	\end{enumerate}	
 \item[Problem 4]
 	Yes, we can use this result to cut some brunch. \par
