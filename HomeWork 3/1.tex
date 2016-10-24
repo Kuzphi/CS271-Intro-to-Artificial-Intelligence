@@ -41,12 +41,13 @@
 	Yes, consider the following evaluation function $f$, $f(x) = 1$, if $x$ is a winning state, $f(x) = -1$ if $x$ is a lost state, and $f(x) = 0$ if $x$ is a tie state. Applied $f(x)$ into this game, then we can use min-max algorithm in this game tree . Thus alpha-beta pruning can correctly applied in this problem.
 \item [Problem 3]\textbf{Solution:}\par
 	\begin{enumerate}
-		\item move to $B$
-		\item $O$, $Q$,$I$,$T$.$U$
+		Let's name the node in each layer by the order from left to right.
+		\item move to first black circle.
+		\item In third layer(black square), 5^{th}, 7^{th},8^{th},9^{th}, 11^{th} nodes with their subtree, would not be examined. In forth layer, 4^{th}, 6^{th},
 	\end{enumerate}	
 \item[Problem 4]\textbf{Solution:}\par
 	Assume $f(x) = 2ax + b$ where $a > 0$.\\
-	Because $f(x)$ monotonic incresing, $\forevery x_1,x_2, x_1 > x_2$, $f(x_1)> f(x_2)$. So, the larger value remains after trasforming. Thus choice remains unchanged.
+	Because $f(x)$ monotonic increasing, $\forevery x_1,x_2, x_1 > x_2$, $f(x_1)> f(x_2)$. So, the larger value remains after transforming. Thus choice remains unchanged.
 \item [Problem 5]\textbf{Solution:}\par
 
 
