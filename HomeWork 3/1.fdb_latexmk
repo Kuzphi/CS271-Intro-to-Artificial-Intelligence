@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1476918750 "1.tex" "/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/HomeWork 3/1.pdf" "1" 1476918750
+["pdflatex"] 1477345953 "1.tex" "/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/HomeWork 3/1.pdf" "1" 1477345953
   "/etc/texmf/web2c/texmf.cnf" 1474570252 1101 af7716885e081ab43982cab7b4672c1a ""
-  "/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/HomeWork 3/1.aux" 1476918750 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/HomeWork 3/1.aux" 1477345953 8 a94a2480d3289e625eea47cd1b285758 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -27,8 +27,10 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy8.tfm" 1136768653 520 7bb3abb160b19e0ed6ac404bb59052b7 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -84,12 +86,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1458942643 31351 b32c45dce4a01cb7b53ed90c546614ca ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1474570429 1863403 f3ff9a4253bcb5fb9a9baaf0c572cb01 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1474570440 3856158 5abf70222ad56fd589dcf882bd8c33a5 ""
-  "1.aux" 1476918750 8 a94a2480d3289e625eea47cd1b285758 ""
-  "1.jpg" 1476918701 4136961 6a21cd47ba963919e71abad4f19f9759 ""
-  "1.tex" 1476918749 1582 9375198604ab9054338aaa259e66c10d ""
+  "1.aux" 1477345953 8 a94a2480d3289e625eea47cd1b285758 ""
+  "1.jpg" 1477342576 1302945 5633d98e37d9bcca34bda798ce1b4267 ""
+  "1.tex" 1477345952 2451 b770d92349dc34977c3779e3ae257f82 ""
   (generated)
-  "1.log"
-  "/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/HomeWork 3/1.pdf"
   "/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/HomeWork 3/1.log"
   "1.aux"
   "1.pdf"
+  "1.log"
+  "/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/HomeWork 3/1.pdf"
