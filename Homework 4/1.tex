@@ -120,15 +120,15 @@
 		\item label the cell as following graph. \par
 			\includegraphics[width=2  in]{1.jpg}
 		\item Yes
-		\item No
+		\item Yes, $A = 2$ $B = 6$ $C = 9$ $D = 5$ $E= 4$ $F = 1$ $G = 3$ $H = 8$
 	\end{enumerate}
 \item[Problem 5]\textbf{Solution:}\par
 	\begin{enumerate}
-		\item New Domain as following:\\
+		\item No, New Domain as following:\\
 		$D_2,D_3 = \{3,4,5,6,7,8,9\}$ \\
 		$D_4,D_5,D_6,D_7 = \{5,6,7,8,9\}$ \\
 		$D_8,D_9,...,D_{15} = \{7,8,9\}$
-		\item One solution is following:\\
+		\item Yes and One solution is following:\\
 		$X_1 = 1$ \\
 		$X_2,X_3 = 3$ \\
 		$X_4,X_5,X_6,X_7 = 5$ \\
@@ -137,12 +137,34 @@
 		\item assume $d$ is the size of domain, $O(15 * d^2) = O(d^2)$
 	\end{enumerate}
 \item[Problem 6]\textbf{Solution:}\par
-	734 + 734 = 1468
+	\begin{gather*}
+		O + O = R + 10C_{10}\\
+		C_{10} + W + W = U + 10 C_{100}\\
+		C_{100} + T + T = O + 10 C_{100}\\
+		C_{1000} = F\\
+		\text{Among variable O,R,W,T,O,U, their values are different.}
+	\end{gather*}
+	Domain:\\
+	$D(F),D(C_{1000}) = \{1\}$ \\
+	$D(C_{10}),D(C_{100}) = \{0,1\}$ \\
+	$D(T) = \{1,2,3,4,5,6,7,8,9\}$ \\
+	$D(W),D(O),D(U),D(R) = \{0,1,2,3,4,5,6,7,8,9\}$
+	\begin{enumerate}
+		\item $F$ is $1$, therefore $C_{1000}$ is $1$ and eliminate $1$ in other domain. and $D(T) = \{5,6,7,8,9\}$. $D(O) = \{0,2,4,6,8\}$.
+		\item next MRV is $C_{100}$. set $C_{100}$ is $0$, $D(W) = \{2,3,4\}$,$D(U) = \{4,6,8\}$.
+		\item next MRV is $C_{10}$. set $C_{10}$ is $0$, $D(O) = \{2,4\}$, $D(R) = \{4,8\}$.
+		\item next MRV is $D(O)$, set $D(O)= 4$, therefore, $D(T) = \{7\}$,$D(R) = \{8\}$, $D(W) = \{3\}$, $D(U) = \{6\}$.
+		\item next MRV is $D(T)$, set  $D(T) = 7$.
+		\item next MRV is $D(R)$, set  $D(W) = 8$.
+		\item next MRV is $D(W)$, set  $D(W) = 3$.
+		\item next MRV is $D(U)$, set  $D(U) = 6$.
+	\end{enumerate}
+	Find a solution which is $734 + 734 = 1468$.
 \item[Problem 7]\textbf{Solution:}\par
 	\begin{enumerate}
-		\item variable elimination
-		\item variable elimination
-		\item variable elimination
+		\item variable elimination and arc consistency with domain splitting
+		\item variable elimination and arc consistency with domain splitting
+		\item variable elimination and arc consistency with domain splitting
 	\end{enumerate}
 
 
