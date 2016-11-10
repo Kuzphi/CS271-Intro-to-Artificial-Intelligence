@@ -90,7 +90,7 @@ First, it is obvious that $a$ must be true, otherwise for any logical expression
 		$yDiagnol = D_{2} \land D_{3} \land ... \land D_{n+m}$\\
 
 
-		Final answer is $Row \land COl \land xDiagnol \land yDiagnol$.
+		Final answer is $Row \land Col \land xDiagnol \land yDiagnol$.
 \item[Problem 6]\textbf{Solution:}\par
 	\begin{enumerate}
 		\item 
@@ -156,7 +156,23 @@ First, it is obvious that $a$ must be true, otherwise for any logical expression
 		\item valid $Big \lor Dumb \lor \neg Dumb \lor Big = True \lor Big = True$.
 	\end{enumerate}
 \item[Problem 8]\textbf{Solution:}\par
-	$\{\neg P \lor Q, \neg L \lor \neg M \lor P, \neg B \lor \neg L \lor M, \neg A\lor \neg P \lor L,\neg A \lor B \lor L, A, B\}$\\
-	
+	$\{\neg P \lor Q, \neg L \lor \neg M \lor P, \neg B \lor \neg L \lor M, \neg A\lor \neg P \lor L,\neg A \lor \neg B \lor L, A, B\}$\\
+	\begin{enumerate}
+		\item[step 1] 
+			pure symbol $Q = True$\\			
+			$\{\neg L \lor \neg M \lor P, \neg B \lor \neg L \lor M, \neg A\lor \neg P \lor L,\neg A \lor \neg B \lor L, A, B\}$\\
+		\item[step 2]
+			unit clause $A = Ture$, $B = True$.\\
+			$\{\neg L \lor \neg M \lor P, \neg L \lor M, \neg P \lor L, L\}$\\
+		\item[step 3]
+			unit clause $L = Ture$\\
+			$\{\neg M \lor P, M\}$\\
+		\item[step 3]
+			pure symbol $P = True$\\
+			$\{M\}$\\
+		\item[step 3]
+			unit clause $M = Ture$	\\
+		Problem solved.
+	\end{enumerate}
 \end{enumerate}
 \end{document}
