@@ -30,23 +30,24 @@
 
 \begin{enumerate}
 \item[Problem 1]\textbf{Solution:}\par
-	Define cost function as how many constrains are violated. At beginning the cost is $4$.
 	\begin{enumerate}
 		\item \par
-			answer is 1.
-			Only $B$ = True, $A$ = True.
+			True: 1 * 4 = 4($B$ = True, $A$ = True).\\
+			False: (2 * 2 - 1) * 4 = 12
 		\item \par
-			answer is 15.
-			$A$ = False or $B$ = False or $C$ = False or $D$ = False;
+			False: 1. ($A$ = True or $B$ = True or $C$ = True or $D$ = True).\\
+			True: 16 - 1 = 15. 			
 		\item\par
-			answer is 0.
+			True:  0\\
+			False: 16
 	\end{enumerate}
 \item[Problem 2]\textbf{Solution:}\par
 	\begin{enumerate}
 		\item[Set:]
 			Locate(a,b): a is at b' house.			
 		\item[Statement:]
-			$\neg \text{locate(car,Fred)} \to \text{locate(a,John)}$
+			$\neg \text{locate(car,Fred)} \to \text{locate(car,John)}$\\
+			$\neg \text{locate(car,John)} \to \text{locate(car,Fred)}$
 		\item[Constrains:]
 			No, I can not.
 	\end{enumerate}
@@ -65,10 +66,10 @@ First, it is obvious that $a$ must be true, otherwise for any logical expression
 \item[Problem 4]\textbf{Solution:}\par
 
 \begin{align*}
-	\neg[((P\lor \neg Q)\to R)\to(P\land Q)]\\
-	\neg[(\neg(P\lor \neg Q)\lor R)\to(P\land Q)]\\
-	\neg[\neg(\neg(P\lor \neg Q)\lor R)\lor(P\land Q)]\\
-	(\neg P\lor R)\land (Q \lor R) \land (\neg P \lor \neg Q)
+	&\neg[((P\lor \neg Q)\to R)\to(P\land Q)]\\
+	\Leftrightarrow& \neg[(\neg(P\lor \neg Q)\lor R)\to(P\land Q)]\\
+	\Leftrightarrow& \neg[\neg(\neg(P\lor \neg Q)\lor R)\lor(P\land Q)]\\
+	\Leftrightarrow& (\neg P\lor R)\land (Q \lor R) \land (\neg P \lor \neg Q)
 \end{align*}
 \item[Problem 5]\textbf{Solution:}\par
 		$r_{i,j} = \neg q_{i,1}\land \neg q_{i,2}\land ... \land \neg q_{i,j-1} \land q_{i,j} \land \neg q_{i,j+1}\land...\land \neg q_{i,n}$\\
@@ -88,8 +89,6 @@ First, it is obvious that $a$ must be true, otherwise for any logical expression
 		$yd_{i,j} = \neg q_{i+j-m,m}\land \neg q_{i+j-m+1,m - 1}\land ... \land \neg q_{i-1,j+1} \land q_{i,j} \land \neg q_{i+1,j-1}\land...\land \neg q_{n,m - i - j}(i > j)$\\
 		$yD_i = \bigvee \limits_{x + y = i} d_{x,y}$\\
 		$yDiagnol = D_{2} \land D_{3} \land ... \land D_{n+m}$\\
-
-
 		Final answer is $Row \land Col \land xDiagnol \land yDiagnol$.
 \item[Problem 6]\textbf{Solution:}\par
 	\begin{enumerate}
@@ -156,23 +155,16 @@ First, it is obvious that $a$ must be true, otherwise for any logical expression
 		\item valid $Big \lor Dumb \lor \neg Dumb \lor Big = True \lor Big = True$.
 	\end{enumerate}
 \item[Problem 8]\textbf{Solution:}\par
-	$\{\neg P \lor Q, \neg L \lor \neg M \lor P, \neg B \lor \neg L \lor M, \neg A\lor \neg P \lor L,\neg A \lor \neg B \lor L, A, B\}$\\
+	Prove KB $\land \neg Q$ is unsatisfied. KB is: \\
+	$\{\neg P \lor Q, \neg L \lor \neg M \lor P, \neg B \lor \neg L \lor M, \neg A\lor \neg P \lor L,\neg A \lor \neg B \lor L, A, B, \neg Q\}$\\
 	\begin{enumerate}
-		\item[step 1] 
-			pure symbol $Q = True$\\			
-			$\{\neg L \lor \neg M \lor P, \neg B \lor \neg L \lor M, \neg A\lor \neg P \lor L,\neg A \lor \neg B \lor L, A, B\}$\\
+		\item[step 1]
+			unit clause $A = Ture$, $B = True$, $Q = False$\\
+			$\{\neg P,\neg L \lor \neg M \lor P, \neg L \lor M, \neg P \lor L, L\}$\\
 		\item[step 2]
-			unit clause $A = Ture$, $B = True$.\\
-			$\{\neg L \lor \neg M \lor P, \neg L \lor M, \neg P \lor L, L\}$\\
-		\item[step 3]
-			unit clause $L = Ture$\\
-			$\{\neg M \lor P, M\}$\\
-		\item[step 3]
-			pure symbol $P = True$\\
-			$\{M\}$\\
-		\item[step 3]
-			unit clause $M = Ture$	\\
-		Problem solved.
+			unit clause $L = Ture$, $P = False$\\
+			$\{\neg M, M\}$\\
+		It is unsatisfied, thus problem solved.
 	\end{enumerate}
 \end{enumerate}
 \end{document}
