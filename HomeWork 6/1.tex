@@ -30,7 +30,6 @@
 
 \begin{enumerate}
 \item[Problem 1]\textbf{Solution:}\par
-	Define cost function as how many constrains are violated. At beginning the cost is $4$.
 	\begin{enumerate}
 		\item \par
 			In original expression, $x$ and $y$ could be same. Thus it should be revised as following:
@@ -80,10 +79,12 @@
 		&\neg like(John, rain)\\
 		&\neg like(John, snow)\\
 		&\neg Alpine(x_6) \lor \neg climber(x_6) \lor skier(x_6)\\
-		&\neg skier(John)\\
-		&climber(John)\\
-		& Alpine(John) \land climber(John) \land \neg siker(John)\\
-		&\neg (\neg Alpine(John) \lor \neg climber(John) \lor skier(John))
+		&\neg skier(John) \lor like(John,snow)\{4,x_3/John\} \\
+		&\neg skier(John)\{8,10\}\\
+		& climber(John)\{1,2,11\}\\
+		& Alpine(John) \land climber(John) \land \neg siker(John)\{1,11,12\}\\
+		&\neg Alpine(John) \lor \neg climber(John) \lor skier(John)\{9,x_6/John\}\\
+		&Empty\{13,14\}
 	\end{align}
 	substitute $x_6$ by $John$, we can find it contradict with (13), and it show John is the answer.
 \item[Problem 4]\textbf{Solution:}\par
@@ -105,12 +106,12 @@
 		\item
 		$$parent(Bluebeard,Charlies)$$
 		\item
-		$$\forall x,y, parent(x,y) = offspring(y,x)$$
+		$$\forall x,y, parent(x,y) \Leftrightarrow offspring(y,x)$$
 		\item
 		$$\forall x,mammals(x) \Rightarrow \exists y, parent(y,x)$$
 	\end{enumerate}	
 \item[Problem 6]\textbf{Solution:}\par
-
+\includegraphics[width=4  in]{1.jpg}\par
 \item[Problem 7]\textbf{Solution:}\par
 \begin{enumerate}
 	\item 
