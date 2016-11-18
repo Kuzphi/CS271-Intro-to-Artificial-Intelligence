@@ -118,17 +118,17 @@
 	\begin{eqnarray*}
 		&&((\exists x)[P(x)] \lor (\exists x)[Q(x)])\Rightarrow (\exists y)[P(y) \lor Q(y)]\\
 		&&\neg ((\exists x)[P(x)] \lor (\exists x)[Q(x)]) \lor (\exists y)[P(y) \lor Q(y)]\\
-		&&((\forall x)[P(x)] \land (\forall x)[Q(x)]) \lor P(Y) \lor Q(Y)\\
+		&&((\forall x)[\neg P(x)] \land (\forall x)[\neg Q(x)]) \lor P(Y) \lor Q(Y)\\
 		&&(\neg P(x_1)\land \neg Q(x_1)) \lor P(Y) \lor Q(Y)\\
 		&&(\neg P(x_1)\lor P(Y) \lor Q(Y)) \land (\neg Q(x_1) \lor P(Y) \lor Q(Y))
 	\end{eqnarray*}
 
 	\item 
 	\begin{eqnarray*}
-	&&(\exists x)[P(x)] \Rightarrow (\exists z)[(\forall x)[Q(x,z)] \lor (\forall x)[R(x,y,z)]]\\
-	&&\neg (\exists x)[P(x)] \lor (\exists z)[(\forall x)[Q(x,z)] \lor (\forall x)[R(x,y,z)]]\\
-	&&(\forall x) [\neg P(x)] \lor (\exists z)[(\forall x)[Q(x,z)] \lor (\forall x)[R(x,y,z)]]\\
-	&&\neg P(x_1) \lor [Q(x_2,Z) \lor R(x_3,y,Z)\\
+	&&(\forall x)[P(x)] \Rightarrow (\exists z)[(\forall x)[Q(x,z)] \lor (\forall x)[R(x,y,z)]]\\
+	&&\neg (\forall x)[P(x)] \lor (\exists z)[(\forall x)[Q(x,z)] \lor (\forall x)[R(x,y,z)]]\\
+	&&(\exists x) [\neg P(x)] \lor (\exists z)[(\forall x)[Q(x,z)] \lor (\forall x)[R(x,y,z)]]\\
+	&&\neg P(X) \lor [Q(x_1,Z) \lor R(x_2,y,Z)\\
 	\end{eqnarray*}
 	\item 
 	\begin{eqnarray*}
@@ -167,7 +167,7 @@
 		&&Push(01)\\
 		&&\neg Push(02)\\
 		&&\neg Green(x_4)\\
-		&&Push(02) \lor \neg Push(01)\lor Blue(01) \{ 16, x_3/02, y_2/01\} \\
+		&&Push(02) \lor \neg Push(01)\lor Blue(01) \{ 18, x_3/02, y_2/01\} \\
 		&&Blue(01) \text{ (17,18,19,20)}\\
 		&&\neg Blue(01)\lor \neg Push(01) \lor Push(02) \lor Green(02)\{14, x_1/01,y1/02 \} \\
 		&&Green(02)\{17,18,21,22,\}\\

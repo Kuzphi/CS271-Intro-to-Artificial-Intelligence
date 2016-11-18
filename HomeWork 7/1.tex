@@ -30,47 +30,15 @@
 
 \begin{enumerate}
 \item[Problem 1]\textbf{Solution:}\par
-	Define cost function as how many constrains are violated. At beginning the cost is $4$.
-	\begin{enumerate}
-		\item \par
-			In original expression, $x$ and $y$ could be same. Thus it should be revised as following:
-			$$\neg \exists x,y,n\text{ }Person(x) \land Person(y) \land \neg(x = y) \land HasSS\#(x,n) \land HasSS\#(y,n)$$ 
-		\item \par
-			Yes, it is correct.
-		\item \par
-			No. In original expression, it said that everyone has every different SSN, which obviously incorrect.
-			$$\forall x,n\text{ }Person(x) \land HasSS\#(x,n) \Rightarrow Digits(n,9)$$
-		\item \par
-		Assume $SS\#(x)$ means $x$'s social security number.
-		$$\neg \exists x,y\text{ }Person(x) \land Person(y) \land (SS\#(x) = SS\#(y))$$
-		$$SS\#(Jhon) = SS\#(Mary)$$
-		$$\forall x\text{ }Person(x) \Rightarrow Digits(SS\#(x),9)$$
-	\end{enumerate}
 \item[Problem 2]\textbf{Solution:}\par
-	\begin{enumerate}
-		\item No
-		\item $x = A, y = B , z = B$
-		\item $x = David, father(x) = George$
-		\item $x = g(u) = g(f(v))$
-		\item $x = y = z = B$
-	\end{enumerate}
 \item[Problem 3]\textbf{Solution:}\par
-	\begin{align}
-		&Alpine(Tony), Alpine(Mike), Alpine(John).\\
-		&\forall x, Alpine(x)  \Rightarrow (skier(x)\land \neg climber(x)) \lor (\neg skier(x) \land climber(x))\\
-		&\forall x, climber(x) \Rightarrow \neg like(x,Rain) \\
-		&\forall x, skier(x) \Rightarrow like(x,snow) \\
-		&\forall x, like(Jhon, x) \Rightarrow \neg like(Mike, x)\\
-		&\forall x, \neg like(Jhon, x) \Rightarrow like(Mike, x)\\
-		&\neg like(John, rain)\\
-		&\neg like(John, snow)
-		\text{from (6) (7) (8), we can obtain}
-		like(mike,rain)
-	\end{align}
+\begin{enumerate}
+	\item
+	\item
+	\item
+	\item
+\end{enumerate}
 \item[Problem 4]\textbf{Solution:}\par
 \item[Problem 5]\textbf{Solution:}\par
-\item[Problem 6]\textbf{Solution:}\par
-\item[Problem 7]\textbf{Solution:}\par
-\item[Problem 8]\textbf{Solution:}\par
 \end{enumerate}
 \end{document}
