@@ -30,13 +30,59 @@
 
 \begin{enumerate}
 \item[Problem 1]\textbf{Solution:}\par
+\begin{enumerate}
+	\item[PutHat]
+		PRECOND: $\neg Wear(hat)$\\
+		EFFECT: $Wear(hat)$
+	\item[PutShoes]
+		PRECOND: $\neg Wear(shoes)$\\
+		EFFECT: $Wear(shoes)$
+	\item[PutShirt]
+		PRECOND: $\neg Wear(shirt)$\\
+		EFFECT: $Wear(shirt)$
+	\item[PutSocks]
+		PRECOND: $\neg Wear(socks)$\\
+		EFFECT: $Wear(socks)$
+\end{enumerate}
 \item[Problem 2]\textbf{Solution:}\par
+	Goal state: 
+	$On(C,Table) \land On(B,C) \land On(A,B) \land clear(A) \land clear(Table)$.\\
+	\begin{enumerate}
+		\item[First Step] valid action $Move(A,Table, B)$\\
+			State is $On(C,Table) \land On(B,C) \land On(A,Table) \land clear(A) \land clear(B)\land clear(Table)$.\\
+		\item[Second Step] valid action $Move(B,Table, C)$\\
+			State is $On(C,Table) \land On(B,Table) \land On(A,Table) \land clear(A) \land clear(B)\land clear(C) \land clear(Table)$.\\
+		\item[Third Step] valid action $Move(C,A,Table)$\\
+			State is $On(C,A)\land On(B,Table) \land On(A,Table) \land clear(C)\land clear(B)$. which is the start state. Thus the problem solved.
+	\end{enumerate}
 \item[Problem 3]\textbf{Solution:}\par
 \begin{enumerate}
-	\item
-	\item
-	\item
-	\item
+	\item[Initial state:] \par
+		$At(Monkey,A)\land At(Bananas) \land At(Box,C) \land Height(Monkey, Low) \land Height(Bananas, High)$
+	\item[Action Schema]: \par
+		\begin{enumerate}
+			\item[Go(x,y)]
+				PRECOND: $At(Monkey, x)$\\
+				EFFECT: $At(Monkey, y) \land \neg At(Monkey, x)$
+			\item[Push(x,y)]
+				PRECOND: $At(Monkey, x) \land At(Box,x) \land Height(Monkey, Low)$\\
+				EFFECT: $\neg At(Monkey, x) \land \neg At(Box,x) \land At(Monkey, y) \land At(Box,y)$
+			\item[ClimbUp]
+				PRECOND: $At(Monkey, x) \land At(Box,x) \land Height(Monkey, Low)$\\
+				EFFECT: $\neg Height(Monkey, Low) \land Height(Monkey, High)$
+			\item[ClimbDown]
+				PRECOND: $At(Monkey, x) \land At(Box,x) \land Height(Monkey, High)$\\
+				EFFECT: $\neg Height(Monkey, High) \land Height(Monkey, Low)$
+			\item[Grasp]
+				PRECOND: $At(Monkey, x) \land At(Bananas,x) \land Height(Monkey, y)\land Height(Bananas, y)$\\
+				EFFECT: $With(Monkey, Bananas)$
+			\item[UnGrasp]
+				PRECOND: $With(Monkey, Bananas)$\\
+				EFFECT: $\neg With(Monkey, Bananas)$
+		\end{enumerate}
+	\item[c] $With(Monkey, Box, s) \land (\exists x)[At(Box, x, s_0)\land At(Box,x,s)]$\\
+	There is no way to represent the relationship between two state within the plan in STRIP. So no way to represent this goal.
+	\item[d] In function push, add $Pushable(Box)$ in PRECOND.
 \end{enumerate}
 \item[Problem 4]\textbf{Solution:}\par
 \item[Problem 5]\textbf{Solution:}\par
