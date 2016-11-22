@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1479517621 "1.tex" "/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/HomeWork 7/1.pdf" "1" 1479517668
+["pdflatex"] 1479772921 "1.tex" "/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/HomeWork 7/1.pdf" "1" 1479772921
   "/etc/texmf/web2c/texmf.cnf" 1474570252 1101 af7716885e081ab43982cab7b4672c1a ""
-  "/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/HomeWork 7/1.aux" 1479517621 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/HomeWork 7/1.aux" 1479772921 8 a94a2480d3289e625eea47cd1b285758 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -85,11 +85,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1458942643 31351 b32c45dce4a01cb7b53ed90c546614ca ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1474570429 1863403 f3ff9a4253bcb5fb9a9baaf0c572cb01 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1474570440 3856158 5abf70222ad56fd589dcf882bd8c33a5 ""
-  "1.aux" 1479517621 8 a94a2480d3289e625eea47cd1b285758 ""
-  "1.tex" 1479517665 3338 3571784ef4eb11edea6541d0023d5f9a ""
+  "1.aux" 1479772921 8 a94a2480d3289e625eea47cd1b285758 ""
+  "1.tex" 1479772921 5973 e6d6846ff921b598f8d34ddc2ad0a1d0 ""
   (generated)
   "1.aux"
+  "/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/HomeWork 7/1.log"
+  "1.pdf"
   "1.log"
   "/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/HomeWork 7/1.pdf"
-  "1.pdf"
-  "/home/dan/Desktop/CS271-Intro-to-Artificial-Intelligence/HomeWork 7/1.log"

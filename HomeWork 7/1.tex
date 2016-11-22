@@ -52,7 +52,7 @@
 			State is $On(C,Table) \land On(B,C) \land On(A,Table) \land clear(A) \land clear(B)\land clear(Table)$.\\
 		\item[Second Step] valid action $Move(B,Table, C)$\\
 			State is $On(C,Table) \land On(B,Table) \land On(A,Table) \land clear(A) \land clear(B)\land clear(C) \land clear(Table)$.\\
-		\item[Third Step] valid action $Move(C,A,Table)$\\
+		\item[Third Step] valid action $MovetoTable(C,A)$\\
 			State is $On(C,A)\land On(B,Table) \land On(A,Table) \land clear(C)\land clear(B)$. which is the start state. Thus the problem solved.
 	\end{enumerate}
 \item[Problem 3]\textbf{Solution:}\par
@@ -85,6 +85,49 @@
 	\item[d] In function push, add $Pushable(Box)$ in PRECOND.
 \end{enumerate}
 \item[Problem 4]\textbf{Solution:}\par
+	See appendix.
 \item[Problem 5]\textbf{Solution:}\par
+	\begin{enumerate}
+		\item[Init]:\par
+		$F^0=\{ On(A,Table)^0 , On(B,Table)^0 , On(C,Table)^0 , clear(A)^0 , clear(B)^0 , clear(C)^0 ,\\ \neg On(A,B)^0 , \neg On(A,C)^0, \neg On(B,A)^0, \neg On(B,C)^0 , \neg On(C,A)^0, \neg On(C,B)^0\}$.\\
+		\item[Objective]:\par
+		$On(A,B)\land On(B,C)\land clear(A)$
+
+		\item[Move(a,x,y)]:\par
+		PRECON: $PRE_0 = On(a,x) \land clear(a) \land clear(y)$\\
+		EFFECT: $EFF_0 = On(a,y) \land clear(x) \land \neg clear(y)$\\
+		Delete list: $Del_0 = clear(y)$\\
+		Add list: $Add_0 = On(a,y) \land clear(x)$
+		\item[MovetoTable(a,x)]: \par
+		PRECON: $Pre_1 = On(a,x) \land clear(a)$\\
+		EFFECT: $EFF_1 = On(a,Table) \land clear(x)$\\
+		Delete list: $Del_1 = \emptyset$\\
+		Add list: $Add_1 = On(a,Table) \land clear(x)$
+
+		\item [t = 1]
+		$MovetoTable(a,x)^1 \Rightarrow On(a,x)^0 \land clear(a)^0 \land On(a,Table)^1 \land clear(x)^1$\\
+		$MovetoTable(a,x,y)^1 \Rightarrow On(a,x)^0 \land clear(a)^0 \land clear(y)^0\land On(a,y)^1 \land clear(x)^1 \land \neg clear(y)^1$\\
+		$\neg On(A,Table)^0 \land On(A,Table)^1 \Rightarrow MovetoTable(A,B)^1 \lor MovetoTable(A,C)^1$\\
+		$\neg On(B,Table)^0 \land On(B,Table)^1 \Rightarrow MovetoTable(B,A)^1 \lor MovetoTable(B,C)^1$\\
+		$\neg On(C,Table)^0 \land On(C,Table)^1 \Rightarrow MovetoTable(C,B)^1 \lor MovetoTable(C,A)^1$\\
+		$\neg On(A,B)^0 \land On(A,B)^1 \Rightarrow Move(A,C,B)^1 \lor Move(A,Table,B)^1$\\
+		$\neg On(A,C)^0 \land On(A,C)^1 \Rightarrow Move(A,B,C)^1 \lor Move(A,Table,C)^1$\\
+		$\neg On(B,A)^0 \land On(B,A)^1 \Rightarrow Move(B,C,A)^1 \lor Move(B,Table,A)^1$\\
+		$\neg On(B,C)^0 \land On(B,C)^1 \Rightarrow Move(B,A,C)^1 \lor Move(B,Table,C)^1$\\
+		$\neg On(C,A)^0 \land On(C,A)^1 \Rightarrow Move(C,B,A)^1 \lor Move(C,Table,A)^1$\\
+		$\neg On(C,B)^0 \land On(C,B)^1 \Rightarrow Move(C,A,B)^1 \lor Move(C,Table,B)^1$\\
+		...
+		\item [t = 2]
+		$MovetoTable(a,x)^2 \Rightarrow On(a,x)^1 \land clear(a)^1 \land On(a,Table)^2 \land clear(x)^2$\\
+		$MovetoTable(a,x,y)^2 \Rightarrow On(a,x)^1 \land clear(a)^1 \land clear(y)^1\land On(a,y)^2 \land clear(x)^2 \land \neg clear(y)^2$\\
+		$\neg On(A,B)^1 \land On(A,B)^2 \Rightarrow Move(A,C,B)^2 \lor Move(A,Table,B)^2$\\
+		$\neg On(A,C)^1 \land On(A,C)^2 \Rightarrow Move(A,B,C)^2 \lor Move(A,Table,C)^2$\\
+		$\neg On(B,A)^1 \land On(B,A)^2 \Rightarrow Move(B,C,A)^2 \lor Move(B,Table,A)^2$\\
+		$\neg On(B,C)^1 \land On(B,C)^2 \Rightarrow Move(B,A,C)^2 \lor Move(B,Table,C)^2$\\
+		$\neg On(C,A)^1 \land On(C,A)^2 \Rightarrow Move(C,B,A)^2 \lor Move(C,Table,A)^2$\\
+		$\neg On(C,B)^1 \land On(C,B)^2 \Rightarrow Move(C,A,B)^2 \lor Move(C,Table,B)^2$\\
+		...
+	\end{enumerate}
+
 \end{enumerate}
 \end{document}
